@@ -72,8 +72,8 @@ $(function () {
         .then(initializeProjects)
         .then(function () {
             ko.applyBindings(viewModel, $("body")[0])
-            $("select:has(.multiple)").multipleSelect({ filter: true })
-            $("select:has(.single)").multipleSelect({ single: true, filter: true })
+            $(".multiple").multipleSelect({ filter: true })
+            $(".single").multipleSelect({ single: true, filter: true })
         })
         .catch(function (err) { showGenericModal("Error", err) })
 })
